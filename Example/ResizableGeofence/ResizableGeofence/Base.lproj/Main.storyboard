@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OxR-Qh-nbc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-UI-Text-Medium.otf">
+            <string>SFUIText-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Geofence Map View Controller-->
+        <scene sceneID="Pts-kw-8N4">
+            <objects>
+                <viewController storyboardIdentifier="GeofenceMapViewController" id="OxR-Qh-nbc" customClass="GeofenceMapViewController" customModule="BeanbagApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wLW-Vp-KE5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="97c-YP-sdY">
+                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                                <connections>
+                                    <outlet property="delegate" destination="OxR-Qh-nbc" id="7Dm-RG-FPu"/>
+                                </connections>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Np6-2r-Gwh">
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500 m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fr-A5-QwS">
+                                        <rect key="frame" x="15" y="10" width="345" height="30"/>
+                                        <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="7fr-A5-QwS" secondAttribute="trailing" constant="15" id="Jzw-Yz-xU8"/>
+                                    <constraint firstItem="7fr-A5-QwS" firstAttribute="top" secondItem="Np6-2r-Gwh" secondAttribute="top" constant="10" id="Vov-WG-zN7"/>
+                                    <constraint firstAttribute="height" constant="50" id="sAh-iF-D79"/>
+                                    <constraint firstItem="7fr-A5-QwS" firstAttribute="leading" secondItem="Np6-2r-Gwh" secondAttribute="leading" constant="15" id="tAy-7W-Hi0"/>
+                                    <constraint firstAttribute="bottom" secondItem="7fr-A5-QwS" secondAttribute="bottom" constant="10" id="vw1-7D-8Rq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="97c-YP-sdY" firstAttribute="leading" secondItem="M65-Mh-ffn" secondAttribute="leading" id="EMz-N8-tPE"/>
+                            <constraint firstItem="M65-Mh-ffn" firstAttribute="bottom" secondItem="97c-YP-sdY" secondAttribute="bottom" id="Gf2-JX-tzm"/>
+                            <constraint firstItem="Np6-2r-Gwh" firstAttribute="top" secondItem="M65-Mh-ffn" secondAttribute="top" id="bPL-Ww-9zs"/>
+                            <constraint firstItem="97c-YP-sdY" firstAttribute="trailing" secondItem="M65-Mh-ffn" secondAttribute="trailing" id="bkG-MF-z2w"/>
+                            <constraint firstItem="Np6-2r-Gwh" firstAttribute="leading" secondItem="M65-Mh-ffn" secondAttribute="leading" id="fpc-NR-p0I"/>
+                            <constraint firstItem="97c-YP-sdY" firstAttribute="top" secondItem="Np6-2r-Gwh" secondAttribute="bottom" id="mT9-XL-Kcl"/>
+                            <constraint firstItem="Np6-2r-Gwh" firstAttribute="trailing" secondItem="M65-Mh-ffn" secondAttribute="trailing" id="rEm-tt-M69"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="M65-Mh-ffn"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jad-yB-lHQ"/>
+                    <connections>
+                        <outlet property="label_Radius" destination="7fr-A5-QwS" id="5JI-Vu-lDa"/>
+                        <outlet property="mapView" destination="97c-YP-sdY" id="CAv-yi-601"/>
+                        <outlet property="view_top" destination="Np6-2r-Gwh" id="z3I-j2-3Cb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AZn-OF-cNk" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="974" y="134"/>
+        </scene>
+    </scenes>
+</document>
